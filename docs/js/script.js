@@ -2,7 +2,7 @@
 
 // Core functionality for product form and display — debug logs removed for production
 
-const API_BASE = "https://business-website-frontend.onrender.com";
+const API_BASE = "https://business-website-api.onrender.com";
 const urlParams = new URLSearchParams(window.location.search);
 const isAdmin =
   urlParams.get("admin") === "true" ||

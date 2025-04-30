@@ -160,7 +160,10 @@ async function displayProducts(sortKey = "newest") {
       .map(
         (p) => `
       <div class="product">
-        <img src="${API_BASE}/${p.image}" alt="${p.name}">
+        <img 
+  src="${API_BASE}/uploads/${p.image.split("/").pop()}" 
+  alt="${p.name}"
+>
         <div class="product-content"><h3>${p.name}</h3><p>${
           p.description
         }</p></div>

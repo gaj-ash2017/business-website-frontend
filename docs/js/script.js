@@ -5,9 +5,11 @@ const API_BASE = "https://business-website-api.onrender.com";
 
 // ─── URL Parameters & Admin Detection ───
 const urlParams = new URLSearchParams(window.location.search);
+// allow an explicit global override:
 const isAdmin =
+  window.IS_ADMIN === true ||
   urlParams.get("admin") === "true" ||
-  ["localhost", "127.0.0.1"].includes(location.hostname);
+  ["localhost", "127.0.0.1"].includes(window.location.hostname);
 
 // ─── DOM Ready ───
 window.addEventListener("DOMContentLoaded", () => {
